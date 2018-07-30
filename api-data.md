@@ -40,15 +40,15 @@ You will receive the following response:
 
 ```javascript
 ["dom", {
-    "exchange": "binance", // name of exchanges (from "symbols" message)
+    "exchange": "binance",  // name of exchanges (from "symbols" message)
     "symbol": "LTC_BTC",    // name of ticker (from "symbols" message)
     "data": [
         [
-            1532975165509, // time (in milliseconds)
-            6543.43,       // price
-            0.13,          // quantity
-            0,             // orders count (NOT supported by many exchanges)
-            0              // 0 - Bid, 1 - Ask, 2 - Undefined
+            1532975165509,  // time (in milliseconds)
+            6543.43,        // price
+            0.13,           // quantity
+            0,              // orders count (NOT supported by many exchanges)
+            0               // 0 - Bid, 1 - Ask, 2 - Undefined
         ],
         ...
     ]
@@ -68,14 +68,14 @@ You will receive the following response (continuously until you call `unsubs-quo
 
 ```javascript
 ["quote", {
-    "exchange": "binance", // name of exchanges (from "symbols" message)
+    "exchange": "binance",  // name of exchanges (from "symbols" message)
     "symbol": "LTC_BTC",    // name of ticker (from "symbols" message)
     "data": [
-        1532975165509, // time (in milliseconds)
-        6543.43,       // price
-        0.13,          // quantity
-        0,             // orders count (NOT supported by many exchanges)
-        0              // 0 - Bid, 1 - Ask, 2 - Undefined
+        1532975165509,      // time (in milliseconds)
+        6543.43,            // price
+        0.13,               // quantity
+        0,                  // orders count (NOT supported by many exchanges)
+        0                   // 0 - Bid, 1 - Ask, 2 - Undefined
     ]
 }]
 ```
@@ -253,12 +253,12 @@ You will receive the following response (continuously until you call `unsubs-can
     "symbol": "LTC_BTC",   // name of ticker (from "symbols" message)
     "timeframe": "15min",  // time frame
     "data": [
-        1532975165398, // time (in milliseconds)
-        6552.98,       // open price
-        6554.12,       // close price
-        6551.42,       // low price
-        6557.08,       // high price
-        13328.6        // volume
+        1532975165398,     // time (in milliseconds)
+        6552.98,           // open price
+        6554.12,           // close price
+        6551.42,           // low price
+        6557.08,           // high price
+        13328.6            // volume
     ]
 }]
 ```
