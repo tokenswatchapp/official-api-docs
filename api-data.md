@@ -21,7 +21,10 @@ To stop receiving data updates just send `unsubs-` request.
 In case of incorrect request you will receive the error message:
 
 ```javascript
-["error", ["request", "reason"]]
+["error", {
+	"request": "qwerty",
+	"reason": "invalid message format"
+}]
 ```
 ## Quotes
 
