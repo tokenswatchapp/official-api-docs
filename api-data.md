@@ -22,8 +22,8 @@ In case of incorrect request you will receive the error message:
 
 ```javascript
 ["error", {
-	"request": "qwerty",
-	"reason": "invalid message format"
+    "request": "qwerty",
+    "reason": "invalid message format"
 }]
 ```
 ## Quotes
