@@ -1,4 +1,4 @@
-# Screener WebSocket API (2018-04-21)
+# Screener WebSocket API (2018-08-01)
 ## General
 The Screener API allows you to create and use the basic primitives (watchlists, filters, signals).
 You can find more information about it in [this article](http://medium.com/).
