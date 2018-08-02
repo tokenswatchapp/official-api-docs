@@ -22,17 +22,21 @@ If your ID is correct you will immediately receive the initial message:
 ["init", {
     
     // exchanges which are avaliable for screening
-    "exchanges": [
-        [
-            // name
-            "bittrex",
+    "exchanges": {
+        "bittrex": { // the name of exchange
             // link to the main page
-            "https://bittrex.com",
+            "url-main": "https://bittrex.com",
             // link to the view page with pattern (e.g. BTC-LTC, USDT-LTC)
-            "https://bittrex.com/Market/Index?MarketName=%QUOTE%-%BASE%"
-        ],
+            "url-view": "https://bittrex.com/Market/Index?MarketName=%QUOTE%-%BASE%",
+            // array of available symbols
+            "symbols": [
+                "LTC_BTC",
+                "BTC_USD",
+                ...
+            ]
+        },
         ...
-    ],
+    },
     
     // currencies which you can choose to show
     "currencies": [
@@ -433,3 +437,41 @@ If all is correct you will be continuously receiving `signal-emit` messages:
 You don't need to have screener web-page opened, all API-signals are always working in background on our servers.
 
 To stop receiving `signal-emit` messages you need to remove API-signal from your watchlist or just disable it (in signal parameters dialog).
+
+## Favourites
+
+One more feature is the favourites list. If you want to remember some coins you can just add it to the list by sending `favourites-add` message:
+
+```javascript
+["favourites-add", {
+    "order": 0,            // position in the list (0 - top)
+    "exchange": "binance", // taken from initial message "exchanges".name
+    "symbol": "LTC_BTC"    // taken from initial message "exchanges".symbols
+}]
+```
+
+To remove the element from the list you should send `favourites-remove` message:
+
+```javascript
+["favourites-remove", {
+    "order": 0
+}]
+```
+
+To get all the elements from the favourites list you should send `favourites-get` message:
+
+```javascript
+["favourites-get"]
+```
+
+You will immediately receive the result message:
+
+```javascript
+["favourites", [
+    // symbol    exchange
+    ["ADA_BTC", "bittrex"],
+    ["LTC_BTC", "bittrex"],
+    ["LTC_BTC", "binance"],
+    ...
+]]
+```
