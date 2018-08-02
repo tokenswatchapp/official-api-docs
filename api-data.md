@@ -1,4 +1,4 @@
-# Market Data Web Socket API (2018-08-01)
+# Market Data WebSocket API (2018-08-01)
 ## General
 The base endpoint is: **wss://api-tokenswatch.com:9007**
 
