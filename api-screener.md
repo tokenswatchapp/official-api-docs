@@ -458,6 +458,15 @@ To remove the element from the list you should send `favourites-remove` message:
 }]
 ```
 
+To change the order of the element in the list you should send `favourites-reorder` message:
+
+```javascript
+["favourites-reorder", {
+    "order": 0,
+    "new-order": 1
+}]
+```
+
 To get all the elements from the favourites list you should send `favourites-get` message:
 
 ```javascript
