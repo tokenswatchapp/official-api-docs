@@ -15,7 +15,7 @@ In case of incorrect request you will receive the error message:
 ```
 
 The Screener API is only available for registered users so it's necessarily to provide your ID:
-</br>**wss://api-tokenswatch.com:9008/123123123**
+</br>**wss://api-tokenswatch.com:9008/YOUR_ID_NUMBER**
 
 If your ID is correct you will immediately receive the initial message:
 
