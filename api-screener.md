@@ -15,8 +15,7 @@ In case of incorrect request you will receive the error message:
 ```
 
 The Screener API is only available for registered users so it's necessarily to provide your ID:
-
-**wss://api-tokenswatch.com:9008/123123123**
+</br>**wss://api-tokenswatch.com:9008/123123123**
 
 If your ID is correct you will immediately receive the initial message:
 
@@ -203,7 +202,7 @@ If your ID is correct you will immediately receive the initial message:
         // the ticker will be used in the search only if its "searchColumn" includes "searchText" 
         "searchText": "", // if you don't want to use it, just set empty string
         "searchColumn": "symbol",
-        // currency to which all the price values will be converted
+        // currency to which all the price values will be converted (empty string if conversion is disabled)
         "targetCurrency": "USD",
         // result table will contains "rowsCount" starting from "rowsOffset"
         "rowsOffset": 100,
@@ -348,7 +347,7 @@ You can subscribe to watchlist result by sending `watchlist-subscribe` message:
     // the ticker will be used in the search only if its "searchColumn" includes "searchText" 
     "searchText": "", // if you don't want to use it, just set empty string
     "searchColumn": "symbol",
-    // currency to which all the price values will be converted
+    // currency to which all the price values will be converted (set empty string to disable conversion)
     "targetCurrency": "USD",
     // result table will contains "rowsCount" starting from "rowsOffset"
     "rowsOffset": 100,
