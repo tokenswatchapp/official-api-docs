@@ -50,9 +50,9 @@ If your ID is correct you will immediately receive the initial message:
     // all available columns (of the screener table) 
     "columns": {
         // name    type    
-        "symbol": "default", // simple text 
-        "price": "currency", // numeric value
-        "1h-%": "percent",   // percent value
+        "symbol": "text", // simple text
+        "price": "currency", // e.g. 123.43 BTC
+        "1h-%": "percent",   // e.g. 43.21
         ...
     },
     
