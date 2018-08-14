@@ -165,7 +165,9 @@ If your ID is correct you will immediately receive the initial message:
             // watchlist parameters
             "params": {
                 // the maximum lifetime (in seconds) which ticker could have to be shown
-                "max-lifetime": 3
+                "max-lifetime": 3,
+                // the interval in seconds between watchlist updates
+                "refresh-interval": 2
             },
             // a list of routines (filters / signals)
             "routines": [
@@ -190,7 +192,7 @@ If your ID is correct you will immediately receive the initial message:
     "subscription": {
         // the name of watchlist to which you are subscribed
         "watchlist": "watchlist-name",
-        // the interval in seconds between watchlist updates
+        // the interval in seconds between result sends
         "refresh-interval": 2,
         // a list of columns which will be sent to you
         "columns": ["symbol", "price", "volume"],
@@ -233,7 +235,9 @@ Lets create a new watchlist by sending `watchlist-add` message:
     "name": "myWatchlist",
     "params": {
         // the maximum lifetime (in seconds) which ticker could have to be shown
-        "max-lifetime": 10
+        "max-lifetime": 10,
+        // the interval in seconds between watchlist updates
+        "refresh-interval": 2
     }
 }]
 ```
@@ -253,7 +257,8 @@ You can also change parameters of the existing watchlist by sending `watchlist-c
 ["watchlist-change", {
     "name": "myWatchlist",
     "params": {
-        "max-lifetime": 110
+        "max-lifetime": 110,
+        "refresh-interval": 5
     }
 }]
 ```
@@ -402,9 +407,7 @@ Then you will be receiving result updates continuously:
 If you want to unsubscribe (stop receiving updates) from the watchlist you should send `watchlist-unsubscribe` message:
 
 ```javascript
-["watchlist-unsubscribe", {
-    "name": "myWatchlist"
-}]
+["watchlist-unsubscribe"]
 ```
 
 ## API-signals
