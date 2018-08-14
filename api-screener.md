@@ -48,13 +48,13 @@ If your ID is correct you will immediately receive the initial message:
     ],
     
     // all available columns (of the screener table) 
-    "columns": {
+    "columns": [
         // name    type    
-        "symbol": "text", // simple text
-        "price": "currency", // e.g. 123.43 BTC
-        "1h-%": "percent",   // e.g. 43.21
+        ["symbol", "text"],    // simple text
+        ["price", "currency"], // e.g. 123.43 BTC
+        ["1h-%", "percent"],   // e.g. 43.21
         ...
-    },
+    ],
     
     // all avaliable routines which you can add to your watchlists
     "routines": {
