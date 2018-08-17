@@ -346,7 +346,9 @@ You can subscribe to watchlist result by sending `watchlist-subscribe` message:
     // what columns you want to have in the table result
     // (taken from initial message "columns") 
     "columns": ["symbol", "price", "volume"],
-    // a list of exchange which will be used for search 
+    // a list of exchange which will be used for search
+    "exchanges": ["binance", "bittrex"],
+    // the result table will be sorted by "sortColumn" using "sortOrder"
     "sortOrder": "des"|"asc",
     "sortColumn": "symbol",
     // the ticker will be used in the search only if its "searchColumn" includes "searchText" 
