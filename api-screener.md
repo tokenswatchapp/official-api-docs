@@ -87,7 +87,7 @@ If your ID is correct you will immediately receive the initial message:
             },
             "param-name": {
                 "type": "time",
-                "control": "timebox"|"spin",
+                "control": "date"|"msec",
                 "default": 1523109778655
             },
             "param-name": {
